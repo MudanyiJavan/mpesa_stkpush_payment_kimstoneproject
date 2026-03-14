@@ -104,8 +104,9 @@ app.post("/contact", async (req,res)=>{
             throw new Error("stk push failed");
         }
         const data = await response.json();
-        console.log(data.ResponseDescription);
-
+        const progress= data.ResponseDescription
+        console.log(progress);
+        res.json(progress)
         }catch(error){
         console.error("stk push error:", error);
     }   

@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <select name="code" id="code">
-        <option value="254">kenya</option>
-    </select>
-    <input type="number" placeholder="phone number" id="contact"> <br> <br>
-    <button type="button" id="button">prompt</button>
+    <div id="payment">
+        <select name="code" id="code">
+            <option value="254">kenya</option>
+        </select>        
+        <input type="number" placeholder="phone number" id="contact"> <br> <br>
+        <button type="button" id="button">prompt</button>
 
+        <p id="progress"></p>
+    </div>    
 
     <script>
         const code = document.getElementById("code")
         const contact = document.getElementById("contact")
         const btn = document.getElementById("button")
-         
+        const progress= document.getElementById("progress") 
+
         btn.addEventListener("click", ()=>{
             const phone = code.value + contact.value
             async function payment() {
@@ -29,7 +33,10 @@
                         contact: phone
                     })
                 })
+                let response = await fetchdata.json()
+                progress.textContent= response
             }
+           
             payment()
             contact.value="";
         })
