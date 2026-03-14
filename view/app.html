@@ -7,15 +7,23 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <div id="payment">
-        <select name="code" id="code">
-            <option value="254">kenya</option>
-        </select>        
-        <input type="number" placeholder="phone number" id="contact"> <br> <br>
-        <button type="button" id="button">prompt</button>
+    <div class="header">
+        <h3>Vanyaboro</h3>
+    </div>
 
-        <p id="progress"></p>
-    </div>    
+    <div class="content">
+        <div class="payment">
+            <h3>MPESA STK-PushUp</h3>
+            <select name="code" id="code">
+                <option value="254">+254</option>
+            </select>        
+            <input type="number" placeholder="phone number" id="contact"> <br> <br>
+            <button type="button" id="button">prompt</button>
+
+            <p id="progress"></p>
+        </div> 
+    </div>
+           
 
     <script>
         const code = document.getElementById("code")
