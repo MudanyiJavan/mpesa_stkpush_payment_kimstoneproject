@@ -101,14 +101,19 @@ app.post("/contact", async (req,res)=>{
             
         })
         if(!response.ok){
-            throw new Error("stk push failed");
-        }
+           throw new Error("stk push failed, server error or invalid contact. PLEASE REFRESH AND TRY AGAIN LATER");
+           
+        }        
         const data = await response.json();
         const progress= data.ResponseDescription
         console.log(progress);
-        res.json(progress)
+        res.json(progress);
+
         }catch(error){
         console.error("stk push error:", error);
+        let errmsg= error.message
+        console.log(errmsg)
+        res.json(errmsg)
     }   
     return;
 
