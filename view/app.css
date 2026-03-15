@@ -15,17 +15,17 @@
     width: 75%;    
     border: 2px solid rgb(160, 127, 127);
     border-radius: 10px;
-    padding-left: 12%;
-    padding-bottom: 10%;
+    padding-left: 8%;
+    padding-bottom: 5%;
 }
 .payment input{
-    height: 20%;
+    height: 15%;
     border: 1px solid;
     border-radius: 8px
 
 }
 .payment select{
-    height: 16%;
+    height: 10%;
     border-radius: 8px;
 }
 .payment button{
