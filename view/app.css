@@ -12,8 +12,37 @@
 }
 
 .payment{    
-    width: 30%;    
-    border: 2px solid white;
+    width: 50%;    
+    border: 2px solid rgb(160, 127, 127);
     border-radius: 10px;
-    
+    padding-left: 25%;
+    padding-bottom: 20px;
 }
+.payment input{
+    height: 20%;
+    border: 1px solid;
+    border-radius: 8px
+
+}
+.payment select{
+    height: 16%;
+    border-radius: 8px;
+}
+.payment button{
+    height: 16%;
+    border-radius: 8px;
+    border: 1px solid;
+}
+  #loading {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    z-index: 9999;
+  }
